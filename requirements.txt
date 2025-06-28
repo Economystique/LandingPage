@@ -1,0 +1,2 @@
+# Python dependencies for future purposes
+Flask==2.3.3
