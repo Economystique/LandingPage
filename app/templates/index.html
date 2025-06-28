@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Economystique</title>
-  <link rel="stylesheet" href="/app/static/css/styles.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
 
   <!-- Navbar -->
   <nav>
     <div class="logo">
-      <img src="/app/static/img/economystiqueLogo.png" alt="Logo" style="width: 24px; margin-right: 10px;">
+      <img src="{{ url_for('static', filename='img/economystiqueLogo.png') }}" alt="Logo" style="width: 24px; margin-right: 10px;">
       ECONOMYSTIQUE
     </div>
     <ul>
