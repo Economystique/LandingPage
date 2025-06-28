@@ -1,17 +1,4 @@
 # Flask Landing Page
-
-A modern, responsive landing page built with Flask, featuring user authentication, contact forms, and newsletter subscription.
-
-## Features
-
-- **Modern Design**: Clean, responsive design using Bootstrap 5
-- **User Authentication**: Login and registration system with Flask-Login
-- **Contact Form**: Functional contact form with database storage
-- **Newsletter Subscription**: Email subscription functionality
-- **Database Integration**: SQLAlchemy with SQLite (easily configurable for other databases)
-- **Security**: Password hashing, CSRF protection, and secure session management
-- **Mobile Responsive**: Optimized for all device sizes
-
 ## Project Structure
 
 ```
@@ -42,7 +29,7 @@ your_project/
 ├── requirements.txt        # Python dependencies
 └── README.md              # This file
 ```
-
+##for future purposes (ignore for now)
 ## Installation
 
 1. **Clone the repository**
