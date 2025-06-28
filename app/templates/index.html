@@ -1,31 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Flask App</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Economystique</title>
+  <link rel="stylesheet" href="/app/static/css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="nav-container">
-                <h1>Trial</h1>
-                <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Nav1</a></li>
-                    <li><a href="#">Nav2</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
 
-    <main>
-        
-    </main>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <img src="/app/static/img/economystiqueLogo.png" alt="Logo" style="width: 24px; margin-right: 10px;">
+      ECONOMYSTIQUE
+    </div>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">Plan</a></li>
+    </ul>
+    <button class="contact-button">Contact Us</button>
+  </nav>
 
-    <footer>
-        
-    </footer>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>
+      <span class="eco">ECO</span><span class="nomy">NOMY</span><span class="stique">STIQUE</span>
+    </h1>
+    <p>
+      Empowering businesses with intelligent, efficient, and user-friendly tools to make data-driven decisions that promote growth and sustainability.
+    </p>
+  </section>
+
+  <!-- Pricing Cards -->
+  <section class="plans">
+    <div class="card basic">
+      <h2>Basic</h2>
+      <ul>
+        <li>Inventory Management</li>
+        <li>Sales Management</li>
+        <li>Point-of-Sale System</li>
+      </ul>
+      <button>Get Started</button>
+    </div>
+
+    <div class="card premium">
+      <h2>Premium</h2>
+      <ul>
+        <li>Performance Comparison</li>
+        <li>Sales Forecast</li>
+        <li>Product Movement Analysis</li>
+      </ul>
+      <button>Get Started</button>
+    </div>
+
+    <div class="card enterprise">
+      <h2>Enterprise</h2>
+      <ul>
+        <li>Fully Offline-Capable</li>
+        <li>Customized System</li>
+        <li>On-Site Installation</li>
+      </ul>
+      <button>Contact Sale</button>
+    </div>
+  </section>
+
 </body>
 </html>
