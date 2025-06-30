@@ -7,19 +7,31 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom right, #e0eaf3, #b4c2cc);
-  color: #333;
+  background: linear-gradient(to bottom right, #1f4556, #4a7f81, #458694, #307697, #356278);
+  background-repeat: no-repeat;
+  display: block;
+  color: #000000;
 }
 
 nav {
-  background: white;
-  padding: 15px 40px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  height: 70px;
+
+  background: #D9D9D9; 
+  padding: 0 40px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ccc;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  border-radius: 0 0 15px 15px;
+
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
 nav .logo {
@@ -28,6 +40,21 @@ nav .logo {
   font-weight: bold;
   font-size: 1.2rem;
   color: #0077b6;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;  
+  color: #0077b6;
+  height: 100%;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 10px;
+  object-fit: contain;
 }
 
 nav ul {
@@ -53,25 +80,26 @@ nav .contact-button {
 
 .hero {
   text-align: center;
-  padding: 50px 20px 30px;
+  padding: 120px 20px 30px; 
 }
-
-.hero h1 {
-  font-size: 2.8rem;
-  font-weight: bold;
-}
-
-.hero h1 .eco { color: #222; }
-.hero h1 .nomy { color: #2a9d8f; }
-.hero h1 .stique { color: #38bdf8; }
 
 .hero p {
   margin-top: 15px;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  color: #333;
+  color: #000000;
   line-height: 1.6;
+  font-size: 20px;
+}
+
+.hero-logo img {
+  max-width: 100%;
+  width: 450px; 
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+  padding-top: 10px;
 }
 
 .plans {
@@ -83,22 +111,33 @@ nav .contact-button {
 }
 
 .card {
-  background: white;
+  background: #D9D9D9;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 300px;
   padding: 30px 25px;
   text-align: center;
+  box-shadow: 
+    inset 0 4px 12px rgba(64,93,89,20), 
+    0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    inset 0 2px 8px rgba(0, 0, 0, 0.06),
+    0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
+  text-align: left;
 }
 
-.basic h2 { color: #3a7a5d; }
-.premium h2 { color: #8e44ad; }
-.enterprise h2 { color: #0f4c75; }
+.basic h2 { color: #235142; }
+.premium h2 { color: #580E7B; }
+.enterprise h2 { color: #1D4355; }
 
 .card ul {
   list-style: none;
@@ -114,8 +153,12 @@ nav .contact-button {
 
 .card ul li::before {
   content: "✔";
-  color: green;
+  color: rgb(0, 41, 0);
   margin-right: 8px;
+}
+
+.basic ul li::before {
+  color: #235142;
 }
 
 .premium ul li::before {
@@ -127,26 +170,27 @@ nav .contact-button {
 }
 
 .card button {
+  width: 100%;
   padding: 10px 20px;
   border: none;
-  border-radius: 8px;
+  border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .basic button {
-  background-color: #e0e0e0;
-  color: #333;
+  background-color: #729697;
+  color: #000000;
 }
 
 .basic button:hover {
-  background-color: #d5d5d5;
+  background-color: #235142 ;  
 }
 
 .premium button {
-  background-color: #d1a3f6;
-  color: white;
+  background-color: #7E7FA8;
+  color: rgb(0, 0, 0);
 }
 
 .premium button:hover {
@@ -154,7 +198,7 @@ nav .contact-button {
 }
 
 .enterprise button {
-  background-color: #607d8b;
+  background-color: #335768;
   color: white;
 }
 
