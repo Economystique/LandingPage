@@ -34,35 +34,218 @@
   <!-- Pricing Cards -->
   <section class="plans">
     <div class="card basic">
-      <h2>Basic</h2>
+      <h2>Basic
+        <p>Includes features:</p>
+      </h2>
       <ul>
         <li>Inventory Management</li>
         <li>Sales Management</li>
         <li>Point-of-Sale System</li>
       </ul>
-      <button>Get Started</button>
+      <button onclick="document.getElementById('breakdown').scrollIntoView({ behavior: 'smooth' })">
+        Get Started
+      </button>
     </div>
-
     <div class="card premium">
-      <h2>Premium</h2>
+      <h2>Premium
+        <p>All features in Basic, plus:</p>
+      </h2>
       <ul>
         <li>Performance Comparison</li>
         <li>Sales Forecast</li>
         <li>Product Movement Analysis</li>
       </ul>
-      <button>Get Started</button>
+      <button onclick="document.getElementById('breakdown').scrollIntoView({ behavior: 'smooth' })">
+        Get Started
+      </button>
     </div>
 
     <div class="card enterprise">
-      <h2>Enterprise</h2>
+      <h2>Enterprise
+        <p>All features in Premium, plus:</p>
+      </h2>
       <ul>
         <li>Fully Offline-Capable</li>
         <li>Customized System</li>
         <li>On-Site Installation</li>
       </ul>
-      <button>Contact Sale</button>
+      <button onclick="document.getElementById('breakdown').scrollIntoView({ behavior: 'smooth' })">
+        Contact Sale
+      </button>
     </div>
   </section>
+
+  <!-- About Section -->
+   <section class="about-section">
+    <h2>About Us</h2>
+    <div class="about-card">
+      <p>
+        Economystique is an all-in-one application tailored for MSMEs that provides
+        point-of-sale and inventory management system. 
+        It streamlines sales tracking, stock monitoring, and product analysis.
+      </p>
+    </div>
+  </section>
+
+  <!-- Economystique Team -->
+   <section class="team-section">
+  <h2>Economystique Team</h2>
+  <div class="team-cards">
+
+    <div class="team-card">
+      <div class="team-photo"></div>
+      <div class="team-info">
+        <h3>Patricia Aspillaga</h3>
+        <p>Project Lead</p>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-photo"></div>
+      <div class="team-info">
+        <h3>Kim Ongchangco</h3>
+        <p>Lead Developer</p>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-photo"></div>
+      <div class="team-info">
+        <h3>Franchesca Urbi</h3>
+        <p>Creative Director</p>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Features Section -->
+   <section class="features-section">
+    <div class="feature-card">
+    <div class="icon-container">
+      <img src="{{ url_for('static', filename='img/historical-icon.png') }}" alt="Historical Sales"> <!-- CHANGE-->
+    </div>
+    <h3>Historical Sales Comparison</h3>
+    <div class="extra-info">
+      View historical sales trends to assess past performance and guide future planning.
+    </div>
+    <button class="toggle-btn" onclick="toggleExpand(this)">More Info</button>
+  </div>
+  
+  <div class="feature-card">
+    <div class="icon-container">
+      <img src="{{ url_for('static', filename='img/forecasting-icon.png') }}" alt="Sales Forecasting"> <!-- CHANGE-->
+    </div>
+    <h3>Sales Forecasting</h3>
+    <div class="extra-info">
+      View historical sales trends to assess past performance and guide future planning.
+    </div>
+    <button class="toggle-btn" onclick="toggleExpand(this)">More Info</button>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-container">
+      <img src="{{ url_for('static', filename='img/analysis-icon.png') }}" alt="Product Analysis"> <!-- CHANGE-->
+    </div>
+    <h3>Product Movement Analysis</h3>
+    <div class="extra-info">
+      View historical sales trends to assess past performance and guide future planning.
+    </div>
+    <button class="toggle-btn" onclick="toggleExpand(this)">More Info</button>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-container">
+      <img src="{{ url_for('static', filename='img/inventory-icon.png') }}" alt="Inventory"> <!-- CHANGE-->
+    </div>
+    <h3>Inventory Management</h3>
+    <div class="extra-info">
+      View historical sales trends to assess past performance and guide future planning.
+    </div>
+    <button class="toggle-btn" onclick="toggleExpand(this)">More Info</button>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-container">
+      <img src="{{ url_for('static', filename='img/pos-icon.png') }}" alt="POS"> <!-- CHANGE-->
+    </div>
+    <h3>POS System</h3>
+    <div class="extra-info">
+      View historical sales trends to assess past performance and guide future planning.
+    </div>
+    <button class="toggle-btn" onclick="toggleExpand(this)">More Info</button>
+  </div>
+
+
+  <!-- Plan Section -->
+   <section class="plans">
+    <div class="card basic">
+      <h2>Basic</h2>
+      <ul>
+        <li>Manage up to 30 Products</li>
+        <li>View Daily Sales Summaries</li>
+        <li>Tracks Sales up to a Month</li>
+        <li>Point-of-Sale System</li>
+      </ul>
+      <button onclick="document.getElementById('breakdown').scrollIntoView({ behavior: 'smooth' })">
+        Start for Free
+      </button>
+    </div>
+    <div class="card premium">
+      <h2>Premium</h2>
+      <ul>
+        <li>Unlimited Product Inventory</li>
+        <li>Unlimited Sales Records</li>
+        <li>Point-of-Sale System</li>
+        <li>Performance Comparison</li>
+        <li>Sales Forecast</li>
+        <li>Product Movement Analysis</li>
+      </ul>
+      <button onclick="document.getElementById('breakdown').scrollIntoView({ behavior: 'smooth' })">
+        Start Plan
+      </button>
+    </div>
+
+    <div class="card enterprise">
+      <h2>Enterprise</h2>
+      <h3>₱0</h3>
+      <ul>
+        <li>Unlimited Product Inventory</li>
+        <li>Unlimited Sales Records</li>
+        <li>Point-of-Sale System</li>
+        <li>Performance Comparison</li>
+        <li>Sales Forecast</li>
+        <li>Product Movement Analysis</li>
+        <li>Fully Offline-Capable</li>
+        <li>Customized System</li>
+        <li>On-Site Installation</li>
+      </ul>
+      <button onclick="document.getElementById('breakdown').scrollIntoView({ behavior: 'smooth' })">
+        Contact Sale
+      </button>
+    </div>
+  </section>
+
+  <script>
+  function toggleExpand(button) {
+    const card = button.closest('.feature-card');
+    card.classList.toggle('expanded');
+
+    button.textContent = card.classList.contains('expanded') ? 'Less Info' : 'More Info';
+  }
+</script>
 
 </body>
 </html>

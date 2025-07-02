@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 /* index.html style */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,11 +11,12 @@
 }
 
 body {
-  font-family: 'Poppins', Arial, sans-serif;
-  background: linear-gradient(to bottom right, #5a8ca3, #6fb3b8, #5e9ca8, #4d8fa7, #6a9eb3);
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #1f4556, #4a7f81, #458694, #307697, #356278);
   background-repeat: no-repeat;
   display: block;
   color: #000000;
+  min-height: 100vh;
 }
 
 nav {
@@ -20,8 +24,8 @@ nav {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
-  max-width: 1500px;
+  width: 90%;
+  max-width: 1200px;
   height: 70px;
 
   background: #D9D9D9; 
@@ -33,7 +37,7 @@ nav {
 
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  z-index: 10;
+  z-index: 999;
 }
 
 nav .logo {
@@ -54,7 +58,7 @@ nav .logo {
 }
 
 .logo img {
-  height: 60px;
+  height: 6rem;
   margin-right: 10px;
   object-fit: contain;
 }
@@ -67,17 +71,19 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: #000000;
   font-weight: 500;
+  font-size: 20px;
 }
 
 nav .contact-button {
   background-color: #005c80;
   color: white;
-  padding: 10px 18px;
+  padding: 13px 25px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  font-size: 18px;
 }
 
 nav .contact-button:hover {
@@ -88,43 +94,47 @@ nav .contact-button:hover {
 .hero {
   text-align: center;
   padding: 120px 20px 30px; 
-}
-
-.hero p {
-  margin-top: 15px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #000000;
-  line-height: 1.6;
-  font-size: 20px;
+  padding-top: 140px;
 }
 
 .hero-logo img {
   max-width: 100%;
-  width: 450px; 
+  width: 650px; 
   height: auto;
   display: block;
-  margin: 0 auto 10px;
-  padding-top: 10px;
+  margin: 20px auto 10px;
 }
+
+.hero p {
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #000000;
+  line-height: 1.5;
+  font-size: 25px;
+}
+
+/* PLANS */
 
 .plans {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 80px;
   padding: 40px 20px 60px;
+  margin-top: 20px;
+  margin-bottom: 60px;
 }
 
 .card {
   background: #D9D9D9;
-  border-radius: 15px;
-  width: 300px;
-  padding: 30px 25px;
-  text-align: center;
+  border-radius: 20px;
+  width: 400px;
+  padding: 40px 35px;
+  text-align: center; 
   box-shadow: 
-    inset 0 4px 12px rgba(64,93,90,0.8), 
+    inset 0 4px 12px rgba(64,93,89,20), 
     0 8px 16px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -137,10 +147,27 @@ nav .contact-button:hover {
 }
 
 .card h2 {
-  font-size: 1.95rem;
+  font-size: 1.5rem;
   margin-bottom: 20px;
   text-align: left;
   font-weight: 100;
+}
+
+.card h2 p {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  margin-top: 5px;
+  text-align: left;
+  font-weight: lighter;
+  color: #000000;
+}
+
+.card h2 h1 {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  margin-top: 5px;
+  text-align: left;
+  font-weight: lighter;
 }
 
 .basic h2 { color: #235142; }
@@ -163,12 +190,12 @@ nav .contact-button:hover {
   list-style: none;
   text-align: left;
   padding-left: 0;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
 }
 
 .card ul li {
   margin-bottom: 12px;
-  color: #444;
+  color: #000000;
 }
 
 .card ul li::before {
@@ -195,7 +222,7 @@ nav .contact-button:hover {
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  font-size: 20px;;
 }
 
 .basic button {
@@ -204,7 +231,7 @@ nav .contact-button:hover {
 }
 
 .basic button:hover {
-  background-color: #40a080 ;  
+  background-color: #235142 ;  
 }
 
 .premium button {
@@ -222,7 +249,7 @@ nav .contact-button:hover {
 }
 
 .enterprise button:hover {
-  background-color: #54859c;
+  background-color: #4b636e;
 }
 
 @media (max-width: 950px) {
@@ -230,9 +257,4 @@ nav .contact-button:hover {
     flex-direction: column;
     align-items: center;
   }
-}
-
-/* If there are other font-family declarations, update them too: */
-.logo, .hero, nav, button, h1, h2, h3, h4, h5, h6, p, ul, li, .card, .plans, .contact-button {
-  font-family: 'Poppins', Arial, sans-serif;
 }
