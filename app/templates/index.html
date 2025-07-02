@@ -93,7 +93,7 @@
   <div class="team-cards">
 
     <div class="team-card">
-      <div class="team-photo"></div>
+      <div class="team-photo"> <img src="{{ url_for('static', filename='img/profileAspillaga.png') }}" alt="Aspillaga"> </div>
       <div class="team-info">
         <h3>Patricia Aspillaga</h3>
         <p>Project Lead</p>
@@ -105,7 +105,7 @@
     </div>
 
     <div class="team-card">
-      <div class="team-photo"></div>
+      <div class="team-photo"> <img src="{{ url_for('static', filename='img/profileOngchangco.png') }}" alt="Ongchangco"> </div>
       <div class="team-info">
         <h3>Kim Ongchangco</h3>
         <p>Lead Developer</p>
@@ -117,7 +117,7 @@
     </div>
 
     <div class="team-card">
-      <div class="team-photo"></div>
+      <div class="team-photo"> <img src="{{ url_for('static', filename='img/profileUrbi.png') }}" alt="Urbi"> </div>
       <div class="team-info">
         <h3>Franchesca Urbi</h3>
         <p>Creative Director</p>
@@ -127,7 +127,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -135,24 +134,24 @@
    <section class="features-section">
     <div class="feature-card">
     <div class="icon-container">
-      <img src="{{ url_for('static', filename='img/historical-icon.png') }}" alt="Historical Sales"> <!-- CHANGE-->
+      <img src="{{ url_for('static', filename='img/iconHistoricalSC.png') }}" alt="Historical Sales"> <!-- CHANGE-->
     </div>
     <h3>Historical Sales Comparison</h3>
     <div class="extra-info">
       View historical sales trends to assess past performance and guide future planning.
     </div>
-    <button class="toggle-btn" onclick="toggleExpand(this)">More Info</button>
+    <button class="toggle-btn" onclick="toggleExpand(this)">⮟</button>
   </div>
   
   <div class="feature-card">
     <div class="icon-container">
-      <img src="{{ url_for('static', filename='img/forecasting-icon.png') }}" alt="Sales Forecasting"> <!-- CHANGE-->
+      <img src="{{ url_for('static', filename='img/iconForecasting.png') }}" alt="Sales Forecasting"> <!-- CHANGE-->
     </div>
     <h3>Sales Forecasting</h3>
     <div class="extra-info">
       View historical sales trends to assess past performance and guide future planning.
     </div>
-    <button class="toggle-btn" onclick="toggleExpand(this)">More Info</button>
+    <button class="toggle-btn" onclick="toggleExpand(this)">⮟</button>
   </div>
 
   <div class="feature-card">
@@ -163,7 +162,7 @@
     <div class="extra-info">
       View historical sales trends to assess past performance and guide future planning.
     </div>
-    <button class="toggle-btn" onclick="toggleExpand(this)">More Info</button>
+    <button class="toggle-btn" onclick="toggleExpand(this)">⮟</button>
   </div>
 
   <div class="feature-card">
@@ -174,7 +173,7 @@
     <div class="extra-info">
       View historical sales trends to assess past performance and guide future planning.
     </div>
-    <button class="toggle-btn" onclick="toggleExpand(this)">More Info</button>
+    <button class="toggle-btn" onclick="toggleExpand(this)">⮟</button>
   </div>
 
   <div class="feature-card">
@@ -185,65 +184,83 @@
     <div class="extra-info">
       View historical sales trends to assess past performance and guide future planning.
     </div>
-    <button class="toggle-btn" onclick="toggleExpand(this)">More Info</button>
+    <button class="toggle-btn" onclick="toggleExpand(this)">⮟</button>
   </div>
+  </div>
+  </section>
 
 
   <!-- Plan Section -->
-   <section class="plans">
+  <section class="plans">
     <div class="card basic">
-      <h2>Basic</h2>
-      <ul>
-        <li>Manage up to 30 Products</li>
-        <li>View Daily Sales Summaries</li>
-        <li>Tracks Sales up to a Month</li>
-        <li>Point-of-Sale System</li>
-      </ul>
+      <div class="card-content">
+        <h2>Basic</h2>
+        <p class="price basic-price">
+          <span class="amount">₱0</span><span class="period">/month</span>
+        </p>
+        <ul>
+          <li>Manage up to 30 Products</li>
+          <li>View Daily Sales Summaries</li>
+          <li>Tracks Sales up to a Month</li>
+          <li>Point-of-Sale System</li>
+        </ul>
+      </div>
       <button onclick="document.getElementById('breakdown').scrollIntoView({ behavior: 'smooth' })">
         Start for Free
       </button>
     </div>
+
     <div class="card premium">
-      <h2>Premium</h2>
-      <ul>
-        <li>Unlimited Product Inventory</li>
-        <li>Unlimited Sales Records</li>
-        <li>Point-of-Sale System</li>
-        <li>Performance Comparison</li>
-        <li>Sales Forecast</li>
-        <li>Product Movement Analysis</li>
-      </ul>
+      <div class="card-content">
+        <h2>Premium</h2>
+        <p class="price premium-price">
+          <span class="amount">₱499</span><span class="period">/month</span>
+        </p>
+        <ul>
+          <li>Unlimited Product Inventory</li>
+          <li>Unlimited Sales Records</li>
+          <li>Point-of-Sale System</li>
+          <li>Performance Comparison</li>
+          <li>Sales Forecast</li>
+          <li>Product Movement Analysis</li>
+        </ul>
+      </div>
       <button onclick="document.getElementById('breakdown').scrollIntoView({ behavior: 'smooth' })">
         Start Plan
       </button>
     </div>
 
     <div class="card enterprise">
-      <h2>Enterprise</h2>
-      <h3>₱0</h3>
-      <ul>
-        <li>Unlimited Product Inventory</li>
-        <li>Unlimited Sales Records</li>
-        <li>Point-of-Sale System</li>
-        <li>Performance Comparison</li>
-        <li>Sales Forecast</li>
-        <li>Product Movement Analysis</li>
-        <li>Fully Offline-Capable</li>
-        <li>Customized System</li>
-        <li>On-Site Installation</li>
-      </ul>
+      <div class="card-content">
+        <h2>Enterprise</h2>
+        <p class="price enterprise-price">
+          <span class="amount">Custom</span><span class="period">/one-time</span>
+        </p>
+        <ul>
+          <li>Unlimited Product Inventory</li>
+          <li>Unlimited Sales Records</li>
+          <li>Point-of-Sale System</li>
+          <li>Performance Comparison</li>
+          <li>Sales Forecast</li>
+          <li>Product Movement Analysis</li>
+          <li>Fully Offline-Capable</li>
+          <li>Customized System</li>
+          <li>On-Site Installation</li>
+        </ul>
+      </div>
       <button onclick="document.getElementById('breakdown').scrollIntoView({ behavior: 'smooth' })">
         Contact Sale
       </button>
     </div>
   </section>
 
+
   <script>
   function toggleExpand(button) {
     const card = button.closest('.feature-card');
     card.classList.toggle('expanded');
 
-    button.textContent = card.classList.contains('expanded') ? 'Less Info' : 'More Info';
+    button.textContent = card.classList.contains('expanded') ? '⮝' : '⮟';
   }
 </script>
 
