@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 /* index.html style */
 * {
   box-sizing: border-box;
@@ -6,8 +8,8 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom right, #1f4556, #4a7f81, #458694, #307697, #356278);
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(to bottom right, #5a8ca3, #6fb3b8, #5e9ca8, #4d8fa7, #6a9eb3);
   background-repeat: no-repeat;
   display: block;
   color: #000000;
@@ -18,8 +20,8 @@ nav {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1500px;
   height: 70px;
 
   background: #D9D9D9; 
@@ -78,6 +80,11 @@ nav .contact-button {
   cursor: pointer;
 }
 
+nav .contact-button:hover {
+  background-color: #2c86aa;
+  color: white;
+}
+
 .hero {
   text-align: center;
   padding: 120px 20px 30px; 
@@ -117,7 +124,7 @@ nav .contact-button {
   padding: 30px 25px;
   text-align: center;
   box-shadow: 
-    inset 0 4px 12px rgba(64,93,89,20), 
+    inset 0 4px 12px rgba(64,93,90,0.8), 
     0 8px 16px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -130,14 +137,27 @@ nav .contact-button {
 }
 
 .card h2 {
-  font-size: 1.5rem;
+  font-size: 1.95rem;
   margin-bottom: 20px;
   text-align: left;
+  font-weight: 100;
 }
 
 .basic h2 { color: #235142; }
 .premium h2 { color: #580E7B; }
 .enterprise h2 { color: #1D4355; }
+
+.basic:hover {
+  border: 2px solid #235142;
+}
+
+.premium:hover {
+  border: 2px solid #580E7B;
+}
+
+.enterprise:hover {
+  border: 2px solid #1D4355;
+}
 
 .card ul {
   list-style: none;
@@ -174,23 +194,22 @@ nav .contact-button {
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
-  font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .basic button {
   background-color: #729697;
-  color: #000000;
+  color: white;
 }
 
 .basic button:hover {
-  background-color: #235142 ;  
+  background-color: #40a080 ;  
 }
 
 .premium button {
   background-color: #7E7FA8;
-  color: rgb(0, 0, 0);
+  color: white;
 }
 
 .premium button:hover {
@@ -203,7 +222,7 @@ nav .contact-button {
 }
 
 .enterprise button:hover {
-  background-color: #4b636e;
+  background-color: #54859c;
 }
 
 @media (max-width: 950px) {
@@ -211,4 +230,9 @@ nav .contact-button {
     flex-direction: column;
     align-items: center;
   }
+}
+
+/* If there are other font-family declarations, update them too: */
+.logo, .hero, nav, button, h1, h2, h3, h4, h5, h6, p, ul, li, .card, .plans, .contact-button {
+  font-family: 'Poppins', Arial, sans-serif;
 }
