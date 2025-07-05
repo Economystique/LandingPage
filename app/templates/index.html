@@ -31,7 +31,7 @@
     </p>
   </section>
 
-  <!-- Pricing Cards -->
+  <!-- PLAN -->
   <section class="plans">
     <div class="card basic">
       <h2>Basic
@@ -77,7 +77,6 @@
 
   <!-- About Section -->
    <section class="about-section" id="about">
-    <h2>About Us</h2>
     <div class="about-card">
       <p>
         Economystique is an all-in-one application tailored for MSMEs that provides
@@ -132,60 +131,62 @@
 
   <!-- Features Section -->
    <section class="features-section">
+    <div class="features-wrapper">
+
+      <div class="feature-card">
+      <div class="icon-container">
+        <img src="{{ url_for('static', filename='img/iconHistoricalSC.png') }}" alt="Historical Sales">
+      </div>
+      <h3>Historical Sales Comparison</h3>
+      <div class="extra-info">
+        View and analyze past sales data to track performance trends, identify growth patterns, and inform strategic decisions.
+      </div>
+      <button class="toggle-btn" onclick="toggleExpand(this)">⮟</button>
+    </div>
+    
     <div class="feature-card">
-    <div class="icon-container">
-      <img src="{{ url_for('static', filename='img/iconHistoricalSC.png') }}" alt="Historical Sales"> <!-- CHANGE-->
+      <div class="icon-container">
+        <img src="{{ url_for('static', filename='img/iconForecasting.png') }}" alt="Sales Forecasting"> <!-- CHANGE-->
+      </div>
+      <h3>Sales Forecasting</h3>
+      <div class="extra-info">
+        Generate accurate sales projections using AI-driven time series models, helping you plan ahead and manage demand effectively.
+      </div>
+      <button class="toggle-btn" onclick="toggleExpand(this)">⮟</button>
     </div>
-    <h3>Historical Sales Comparison</h3>
-    <div class="extra-info">
-      View historical sales trends to assess past performance and guide future planning.
-    </div>
-    <button class="toggle-btn" onclick="toggleExpand(this)">⮟</button>
-  </div>
-  
-  <div class="feature-card">
-    <div class="icon-container">
-      <img src="{{ url_for('static', filename='img/iconForecasting.png') }}" alt="Sales Forecasting"> <!-- CHANGE-->
-    </div>
-    <h3>Sales Forecasting</h3>
-    <div class="extra-info">
-      View historical sales trends to assess past performance and guide future planning.
-    </div>
-    <button class="toggle-btn" onclick="toggleExpand(this)">⮟</button>
-  </div>
 
-  <div class="feature-card">
-    <div class="icon-container">
-      <img src="{{ url_for('static', filename='img/analysis-icon.png') }}" alt="Product Analysis"> <!-- CHANGE-->
+    <div class="feature-card">
+      <div class="icon-container">
+        <img src="{{ url_for('static', filename='img/analysis-icon.png') }}" alt="Product Analysis"> <!-- CHANGE-->
+      </div>
+      <h3>Product Movement Analysis</h3>
+      <div class="extra-info">
+        Identify fast and slow-moving products through data-driven insights to optimize stock levels and improve sales strategies.
+      </div>
+      <button class="toggle-btn" onclick="toggleExpand(this)">⮟</button>
     </div>
-    <h3>Product Movement Analysis</h3>
-    <div class="extra-info">
-      View historical sales trends to assess past performance and guide future planning.
-    </div>
-    <button class="toggle-btn" onclick="toggleExpand(this)">⮟</button>
-  </div>
 
-  <div class="feature-card">
-    <div class="icon-container">
-      <img src="{{ url_for('static', filename='img/inventory-icon.png') }}" alt="Inventory"> <!-- CHANGE-->
+    <div class="feature-card">
+      <div class="icon-container">
+        <img src="{{ url_for('static', filename='img/inventory-icon.png') }}" alt="Inventory"> <!-- CHANGE-->
+      </div>
+      <h3>Inventory Management</h3>
+      <div class="extra-info">
+        Monitor stock levels in real time, automate inventory tracking, and reduce overstock or stockouts through efficient inventory control.
+      </div>
+      <button class="toggle-btn" onclick="toggleExpand(this)">⮟</button>
     </div>
-    <h3>Inventory Management</h3>
-    <div class="extra-info">
-      View historical sales trends to assess past performance and guide future planning.
-    </div>
-    <button class="toggle-btn" onclick="toggleExpand(this)">⮟</button>
-  </div>
 
-  <div class="feature-card">
-    <div class="icon-container">
-      <img src="{{ url_for('static', filename='img/pos-icon.png') }}" alt="POS"> <!-- CHANGE-->
+    <div class="feature-card">
+      <div class="icon-container">
+        <img src="{{ url_for('static', filename='img/pos-icon.png') }}" alt="POS"> <!-- CHANGE-->
+      </div>
+      <h3>POS System</h3>
+      <div class="extra-info">
+        Process transactions accurately through an intuitive, ergonomic interface designed for efficiency and ease of use.
+      </div>
+      <button class="toggle-btn" onclick="toggleExpand(this)">⮟</button>
     </div>
-    <h3>POS System</h3>
-    <div class="extra-info">
-      View historical sales trends to assess past performance and guide future planning.
-    </div>
-    <button class="toggle-btn" onclick="toggleExpand(this)">⮟</button>
-  </div>
   </div>
   </section>
 
@@ -254,15 +255,49 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
+   <footer class="custom-footer">
+    <div class="footer-content">
+      <div class="footer-logos">
+        <img src="{{ url_for('static', filename='img/logoUC.png') }}" alt="UC Logo">
+        <img src="{{ url_for('static', filename='img/logoInTTO.png') }}" alt="InTTO Logo">
+        <img src="{{ url_for('static', filename='img/logoAllSeasons.png') }}" alt="All SeasonsLogo">
+      </div>
+      <div class="footer-contact">
+        <p><i class="fas fa-envelope"></i> economystique@gmail.com</p>
+        <p><i class="fab fa-facebook-f"></i> facebook.com/Economystique</p>
+      </div>
+    </div>
+  </footer>
 
-  <script>
+  <button id="scrollTopBtn" title="Back to Top">⮝</button>
+
+<script>
   function toggleExpand(button) {
     const card = button.closest('.feature-card');
     card.classList.toggle('expanded');
-
     button.textContent = card.classList.contains('expanded') ? '⮝' : '⮟';
   }
 </script>
+
+
+<script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+  window.onscroll = function () {
+    scrollBtn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200)
+      ? "block"
+      : "none";
+  };
+
+  scrollBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
 
 </body>
 </html>
